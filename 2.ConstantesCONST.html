@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <h1>CONSTANTES</h1>
+    
+    
+    <script>
+        var hola = "Hola Mundo"
+        let hello = "Hola Mundo"
+        console.log(hola);
+        console.log(hello)
+        //el objeto windows mapea todo en el navegador
+        console.log(window)
+        console.log(window.hola)
+        console.log(window.hello)
+        //hoy en dia usar var es mala practica
+        //un bloque es algo que esta separado por llaves
+        //ambito de bloque, para eso la debemos declarar con let
+        var musica ="Rock"
+        console.log("VAR Variable Musica antes del Bloque:", musica)
+        
+        //esto es un bloque que se generan variables de bloque con LET
+        {
+            var musica = "Pop"
+            console.log("VAR variable Musica dentro del bloque:", musica)
+        }
+        console.log("VAR variable musica después del bloque:", musica)
+        //el hoisting de las variables es volverlas a subir hasta arriba+
+        //son variables globales, osea los sube y repite elvalor
+        //por eso imprime pop dos veces
+    
+        //AHORA VAMOS A VER EL EJEMPLO CON LET
+        //y veremos que se elimina el problema de variables globales
+    
+        let musica2 ="Rock"
+        console.log("LET Variable Musica antes del Bloque:", musica2)
+        
+        //esto es un bloque
+        {
+            let musica2 = "Pop"
+            console.log("LET variable Musica dentro del bloque:", musica2)
+        }
+        console.log("LET variable musica después del bloque:", musica2)
+    
+        //aca respeta el comportamiento de bloque,
+        //es decir dentro del bloque la variable cambia
+        //pero ya afuera respeta el valor inicial y no lo cambia
+
+
+
+
+        /*************CONSTANTES**********************/
+        //ahora usaremos la palabra reservada CONST que es para datos que no van a cambiar
+        let a
+        const PI=3.1416
+        console.log(PI)
+        //VALOR QUE NO CAMBIA
+        a = "kenai"
+        console.log(a)
+
+        //ahora veremos ejemplo de un objeto
+        //un objeto es un conjunto de atributos y metodos con su respectivo valor
+        let objeto = {
+            nombre: "Jon",
+            edad: 35
+        }
+        //un arreglo es una coleccion de valores o de datos
+        let colores = ["blanco, negro, azul"]
+        console.log(objeto)
+        console.log(colores)
+
+        //aca vemos la diferencia entre un valor primitivo y un valor compuesto
+
+        //aca podemos seleccionar un valor del objeto por individual o para agregar
+        objeto.correo="jonmircha@gmail.com"
+
+        //para insertar en un array es con la sentencia push
+        colores.push("anaranjado")
+        //volvemos a imprmir los valores
+        console.log(objeto)
+        console.log(colores)
+
+        //si le cambiamos el tipo let a const en los valores compuestos
+        //no pasa nada ya que esta regla de los constantes se aplica diferente
+        //a los valores primitivos, estos como tal no estamos accediendo al valor
+        //directamente sino que a una referencia, la palabra const, nos permite agregarle
+        //mas valores, ya que para js el valor no ha cambiado
+        let contador = 0
+        let numeros = [1,5,6,1,5,7,8,1]
+        for(let x = 0; x<=numeros.length; x++){
+            if(numeros[x]===1){
+            contador++
+        }
+    }
+    console.log("EL TOTAL DE 1 EN EL ARREGLO ES DE:", contador)
+    
+    </script>
+</body>
+</html>

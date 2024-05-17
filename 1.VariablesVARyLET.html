@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--creamos el header de nuestra pagina web-->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundamentos de JavaScript</title>
+</head>
+
+<body>
+    <h1>Fundamentos de JavaScript!</h1>
+</body>
+<img src="https://media.admagazine.com/photos/637d11a6e63c8afac40e7a01/master/pass/1442809583" width ="300" alt="300">
+
+<script>
+    var hola = "Hola Mundo"
+    let hello = "Hola Mundo"
+    console.log(hola);
+    console.log(hello)
+    //el objeto windows mapea todo en el navegador
+    console.log(window)
+    console.log(window.hola)
+    console.log(window.hello)
+    //hoy en dia usar var es mala practica
+    //un bloque es algo que esta separado por llaves
+    //ambito de bloque, para eso la debemos declarar con let
+    var musica ="Rock"
+    console.log("VAR Variable Musica antes del Bloque:", musica)
+    
+    //esto es un bloque que se generan variables de bloque con LET
+    {
+        var musica = "Pop"
+        console.log("VAR variable Musica dentro del bloque:", musica)
+    }
+    console.log("VAR variable musica después del bloque:", musica)
+    //el hoisting de las variables es volverlas a subir hasta arriba+
+    //son variables globales, osea los sube y repite el valor
+    //por eso imprime pop dos veces
+
+    //AHORA VAMOS A VER EL EJEMPLO CON LET
+    //y veremos que se elimina el problema de variables globales
+
+    let musica2 ="Rock"
+    console.log("LET Variable Musica antes del Bloque:", musica2)
+    
+    //esto es un bloque
+    {
+        let musica2 = "Pop"
+        console.log("LET variable Musica dentro del bloque:", musica2)
+    }
+    console.log("LET variable musica después del bloque:", musica2)
+
+    //aca respeta el comportamiento de bloque,
+    //es decir dentro del bloque la variable cambia
+    //pero ya afuera respeta el valor inicial y no lo cambia
+
+</script>
+
+
+
+</html>
+
+
