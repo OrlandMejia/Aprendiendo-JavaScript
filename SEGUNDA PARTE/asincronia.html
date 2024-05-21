@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincronia en JS</title>
+</head>
+<body>
+    <h1>Asincronia en JavaScript</h1>
+
+<script>
+    /**
+    ***********************TEMPORIZADORES*******************
+    setTimeout = Recibe una funcion que va a ejecutar y un tiempo expresado
+    en milisegundos.
+
+    setInterval = ejecuta una función o instrucción en un intervalo de tiempo
+    definido, de igual forma recibe una función y un intervalo de tiempo
+    */
+
+    console.log("Inicio del setTimeout");
+    setTimeout(()=> {
+       // console.log("Ejecutando un setTimeout, estó se ejecuta una sola vez");
+    },3000);
+
+    //Set interval
+    setInterval(()=>{
+        //console.log("Ejecutando un setInterval, esto se ejecuta indefinidamente cada cierto intervalo de timepo");
+    },1000);
+
+    // ya con esto definido podemos imprimir en la consola un reloj
+    setTimeout(()=>{
+        //console.log(new Date().toLocaleTimeString());
+    },1000);
+
+    // estas funciones tienen su contraparte que cancelan estas instrucciones
+    // en setTimeout está la función clearTimeout(), se debe guardar en una variable para que funcione
+    
+        // ya con esto definido podemos imprimir en la consola un reloj
+        let temporizadorTimeout = setTimeout(()=>{
+            console.log(new Date().toLocaleTimeString());
+        },1000);
+
+
+    // recibe como argumento la variable
+    clearTimeout(temporizadorTimeout);
+    console.log("Despues del clearTimeout");
+
+    // con SETINTERVAL sería la siguiente instrucción
+    // clearInterval()
+    let temporizadorInterval = setInterval(()=>{
+        console.log(new Date().toLocaleTimeString());
+    },1000);
+
+    clearInterval(temporizadorInterval);
+    console.log("Depues del clearInterval");
+</script>
+</body>
+</html>
